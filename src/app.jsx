@@ -28,12 +28,12 @@ const eventsTemplate = [
   },
   {
     time: '12:00',
-    label: 'Fix an ability to toggle a event',
+    label: 'Fix an ability to toggle an event',
     checked: false,
   },
   {
     time: '13:00',
-    label: 'Fix an ability to delete a event',
+    label: 'Fix an ability to delete an event',
     checked: false,
   },
   {
