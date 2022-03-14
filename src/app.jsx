@@ -22,13 +22,13 @@ const eventsTemplate = [
     checked: false,
   },
   {
-    time: '12:00',
-    label: 'Fix an ability to toggle a event',
+    time: '06:00',
+    label: 'Events are not shown in chronological order',
     checked: false,
   },
   {
-    time: '06:00',
-    label: 'Events are not shown in chronological order',
+    time: '12:00',
+    label: 'Fix an ability to toggle a event',
     checked: false,
   },
   {
