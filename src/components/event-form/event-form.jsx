@@ -13,9 +13,15 @@ export const EventForm = () => {
         // eslint-disable-next-line no-alert
         window.alert(`Event already set to ${time}`);
       } else {
-        // add ability to add event
-
-        // clear event after it has been added
+        setEvents([
+          ...events,
+          {
+            label: title,
+            time,
+            checked: false,
+          },
+        ]);
+        setTitle('');
       }
       setTime('');
     }
@@ -33,6 +39,7 @@ export const EventForm = () => {
         id="event-time"
         type="time"
         name="event-time"
+        value={time}
         onChange={(e) => setTime(e.target.value)}
         onKeyUp={handleKeyUp}
         required

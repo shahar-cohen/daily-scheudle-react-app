@@ -7,11 +7,19 @@ export const EventList = () => {
   const { events, setEvents } = React.useContext(EventsContext);
 
   const handleDelete = (time) => {
-    // add function to delete an event
+    setEvents(events.filter((el) => el.time !== time));
   };
 
   const toggleCheck = (time) => {
-    // add function to toggle checked state
+    setEvents(events.map((el) => {
+      if (el.time === time) {
+        return {
+          ...el,
+          checked: !el.checked,
+        };
+      }
+      return el;
+    }));
   };
 
   const handleKeyUp = (e, time) => {
@@ -25,7 +33,8 @@ export const EventList = () => {
       <span className="event-list-title">Schedule:</span>
       {events.length ? (
         <div className="event-list-content">
-          {events.map((eventItem) => (
+          {events.sort((a, b) => ((a.time > b.time) ? 1 : -1))
+            .map((eventItem) => (
               <Checkbox
                 key={eventItem.time}
                 label={eventItem.label}

@@ -44,11 +44,10 @@ const eventsTemplate = [
 ];
 
 export const App = () => {
-  const [events, setEvents] = React.useState([]);
-
+  const [events, setEvents] = React.useState(eventsTemplate);
   return (
     <div className="root">
-      <EventsContext.Provider value={{ events }}>
+      <EventsContext.Provider value={{ events, setEvents }}>
         <EventList />
         <EventResults />
         <EventForm />

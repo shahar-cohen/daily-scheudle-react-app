@@ -3,10 +3,11 @@ import { EventsContext } from '../../event-context';
 import './event-results.scss';
 
 export const EventResults = () => {
+  const { events } = React.useContext(EventsContext);
 
   return (
     <div className="event-results">
-      {`Events Today: ${0}`}
+      {`Events Today: ${events.length}`}
     </div>
   );
 };
